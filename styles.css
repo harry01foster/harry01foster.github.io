@@ -258,6 +258,10 @@ header.scrolled nav {
 .logo img {
     height: 32px;
     transition: all 0.3s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 
 header.scrolled .logo img {
@@ -591,6 +595,13 @@ header.scrolled .logo img {
     
     .hero-content p {
         font-size: 1.1rem;
+    }
+
+    /* Improve logo quality on mobile */
+    .logo img {
+        height: 32px;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
     }
 
     /* Make platform logos display better on mobile */

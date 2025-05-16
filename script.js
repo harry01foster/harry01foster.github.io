@@ -168,4 +168,55 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transform = '';
         });
     });
+    
+    // Contact form handling
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                companyName: document.getElementById('companyName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value
+            };
+            
+            try {
+                // Display loading state
+                formStatus.textContent = 'Sending your information...';
+                formStatus.className = 'form-status';
+                
+                // Production Webhook URL
+                const webhookUrl = 'https://harryfoster.app.n8n.cloud/webhook/26888968-5747-473f-b388-3786a20e1c3d';
+                
+                const response = await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                if (response.ok) {
+                    // Success
+                    formStatus.textContent = 'Thank you! We\'ll be in touch soon.';
+                    formStatus.className = 'form-status success';
+                    contactForm.reset();
+                } else {
+                    // Error
+                    formStatus.textContent = 'Something went wrong. Please try again later.';
+                    formStatus.className = 'form-status error';
+                }
+                
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                formStatus.textContent = 'Something went wrong. Please try again later.';
+                formStatus.className = 'form-status error';
+            }
+        });
+    }
 });

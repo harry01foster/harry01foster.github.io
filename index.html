@@ -49,7 +49,7 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="Resources/Text-black.svg" alt="First Wave Growth Logo">
+                <a href="#home"><img src="Resources/Text-black.svg" alt="First Wave Growth Logo"></a>
             </div>
             <div class="navbar">
                 <ul class="nav-links">
@@ -162,12 +162,12 @@
                     <p>We work with all major platforms and technologies, creating custom connections that amplify your existing investments.</p>
                 </div>
                 <div class="platform-logos animated delay-1">
-                    <div class="platform-logo"><img src="https://i.imgur.com/R0N18Uh.png" alt="Salesforce"></div>
-                    <div class="platform-logo"><img src="https://i.imgur.com/NZC2t1Y.png" alt="Microsoft"></div>
-                    <div class="platform-logo"><img src="https://i.imgur.com/PWST43v.png" alt="AWS"></div>
-                    <div class="platform-logo"><img src="https://i.imgur.com/TUnVZxO.png" alt="Google Cloud"></div>
-                    <div class="platform-logo"><img src="https://i.imgur.com/uTJtQK6.png" alt="Slack"></div>
-                    <div class="platform-logo"><img src="https://i.imgur.com/tfAN8lp.png" alt="Hubspot"></div>
+                    <div class="platform-logo"><a href="#home"><img src="https://i.imgur.com/R0N18Uh.png" alt="Salesforce"></a></div>
+                    <div class="platform-logo"><a href="#home"><img src="https://i.imgur.com/NZC2t1Y.png" alt="Microsoft"></a></div>
+                    <div class="platform-logo"><a href="#home"><img src="https://i.imgur.com/PWST43v.png" alt="AWS"></a></div>
+                    <div class="platform-logo"><a href="#home"><img src="https://i.imgur.com/TUnVZxO.png" alt="Google Cloud"></a></div>
+                    <div class="platform-logo"><a href="#home"><img src="https://i.imgur.com/uTJtQK6.png" alt="Slack"></a></div>
+                    <div class="platform-logo"><a href="#home"><img src="https://i.imgur.com/tfAN8lp.png" alt="Hubspot"></a></div>
                 </div>
             </div>
         </div>
@@ -182,7 +182,7 @@
             <div class="product-cards">
                 <div class="product-card animated">
                     <div class="product-image">
-                        <img src="https://i.imgur.com/rZK6i9T.png" alt="Seeka AI Logo">
+                        <a href="#home"><img src="https://i.imgur.com/rZK6i9T.png" alt="Seeka AI Logo"></a>
                     </div>
                     <div class="product-details">
                         <h3>Seeka AI</h3>
@@ -209,7 +209,7 @@
                 </div>
                 <div class="product-card reversed animated delay-1">
                     <div class="product-image">
-                        <img src="https://placehold.co/300x150?text=Krona" alt="Krona Logo">
+                        <a href="#home"><img src="https://placehold.co/300x150?text=Krona" alt="Krona Logo"></a>
                     </div>
                     <div class="product-details">
                         <h3>Krona</h3>
@@ -255,7 +255,7 @@
                 </div>
                 <div class="team-member animated delay-1">
                     <div class="member-image">
-                        <img src="Resources/IMG_7574-Photoroom.jpg" alt="Tom - Co-Founder">
+                        <img src="Resources/IMG_7571-Photoroom.jpg" alt="Tom - Co-Founder">
                     </div>
                     <h3>Tom</h3>
                     <p class="member-role">Co-Founder</p>
@@ -263,7 +263,7 @@
                 </div>
                 <div class="team-member animated delay-2">
                     <div class="member-image">
-                        <img src="Resources/IMG_7571-Photoroom.jpg" alt="Harry - Co-Founder">
+                        <img src="Resources/IMG_7574-Photoroom.jpg" alt="Harry - Co-Founder">
                     </div>
                     <h3>Harry</h3>
                     <p class="member-role">Co-Founder</p>
@@ -277,8 +277,23 @@
         <div class="container">
             <div class="cta-content animated">
                 <h2>Ready to transform your business with AI?</h2>
-                <p>Schedule a free 30-minute consultation to discover how our solutions can drive growth for your specific needs.</p>
-                <a href="https://calendly.com/firstwavegrowth/consultation" target="_blank" class="btn-primary">Book a Consultation <i class="ri-calendar-line"></i></a>
+                <p>Tell us about your business needs and we'll get in touch to discuss how our solutions can drive growth for you.</p>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="fullName" name="fullName" placeholder="Full Name *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="companyName" name="companyName" placeholder="Company Name *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email Address *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Phone Number (Optional)">
+                    </div>
+                    <button type="submit" class="btn-primary submit-btn">Get in Touch <i class="ri-send-plane-line"></i></button>
+                    <div id="formStatus" class="form-status"></div>
+                </form>
             </div>
             <div class="trust-elements animated delay-1">
                 <div class="testimonial">
@@ -293,7 +308,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="Resources/Text-white.svg" alt="First Wave Growth Logo">
+                    <a href="#home"><img src="Resources/Text-white.svg" alt="First Wave Growth Logo"></a>
                     <p>Driving business growth through intelligent AI solutions</p>
                 </div>
                 <div class="footer-links">

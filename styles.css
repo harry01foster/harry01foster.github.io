@@ -241,7 +241,7 @@ nav {
 }
 
 header.scrolled nav {
-    max-width: 750px;
+    max-width: 950px;
 }
 
 .navbar {
@@ -261,7 +261,7 @@ header.scrolled nav {
 }
 
 header.scrolled .logo img {
-    height: 28px;
+    height: 32px;
 }
 
 .nav-links {
@@ -619,7 +619,7 @@ header.scrolled .logo img {
     }
     
     .footer-logo img {
-        height: 55px;
+        height: 70px;
         margin: 0 auto 1.5rem;
     }
 }
@@ -1086,7 +1086,7 @@ footer {
 }
 
 .footer-logo img {
-    height: 42px;
+    height: 60px;
     margin-bottom: 1.5rem;
 }
 
@@ -1285,7 +1285,8 @@ footer {
     
     /* Make footer logo bigger on mobile */
     .footer-logo img {
-        height: 55px;
+        height: 70px;
+        margin: 0 auto 1.5rem;
     }
 
     .footer-bottom {

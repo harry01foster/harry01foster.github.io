@@ -592,6 +592,36 @@ header.scrolled .logo img {
     .hero-content p {
         font-size: 1.1rem;
     }
+
+    /* Make platform logos display better on mobile */
+    .platform-logo {
+        padding: 1rem;
+    }
+    
+    .platform-logo img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Fix for header spacing and button */
+    header {
+        top: 10px;
+    }
+    
+    nav {
+        padding: 0.7rem 1.2rem;
+        align-items: center;
+    }
+    
+    /* Ensure footer logo looks good */
+    .footer-logo {
+        text-align: center;
+    }
+    
+    .footer-logo img {
+        height: 55px;
+        margin: 0 auto 1.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -625,6 +655,11 @@ header.scrolled .logo img {
 
     .hero {
         padding: 10rem 0 6rem;
+    }
+
+    /* Adjust platform logos for very small screens */
+    .platform-logo {
+        padding: 0.8rem;
     }
 }
 
@@ -728,7 +763,7 @@ a.service-card:hover {
 
 .platform-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; 
     gap: 4rem;
     align-items: center;
 }
@@ -1146,6 +1181,16 @@ footer {
     nav {
         padding: 0.7rem 1.2rem;
     }
+    
+    /* Fix for Get Started button size on mobile */
+    .btn-purchase {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .btn-purchase i {
+        font-size: 0.95rem;
+    }
 
     .container {
         padding: 0 1.5rem;
@@ -1205,9 +1250,27 @@ footer {
     .mobile-menu-btn {
         display: block;
     }
-
+    
+    /* Fix for "We Connect With Your Tech" section on mobile */
+    .platform-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .platform-text {
+        order: 1;
+        max-width: 100%;
+    }
+    
+    .platform-text p {
+        max-width: 100%;
+    }
+    
     .platform-logos {
         grid-template-columns: 1fr 1fr;
+        order: 2;
+        width: 100%;
+        margin: 0 auto;
     }
 
     .team-members {
@@ -1218,6 +1281,11 @@ footer {
     .footer-links {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+    
+    /* Make footer logo bigger on mobile */
+    .footer-logo img {
+        height: 55px;
     }
 
     .footer-bottom {
@@ -1262,11 +1330,28 @@ footer {
         margin-left: auto !important;
         margin-right: auto !important;
     }
+    
+    /* Fix for icon display issues */
+    i.ri-flashlight-line {
+        background: transparent !important;
+        box-shadow: none !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    footer i, 
+    .btn-primary i, 
+    .btn-purchase i {
+        background-color: transparent !important;
+        box-shadow: none !important;
+    }
 }
 
 @media (max-width: 480px) {
     .platform-logos {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
     
     .product-card {
@@ -1275,6 +1360,22 @@ footer {
     
     .trust-elements {
         padding: 2rem 1.5rem;
+    }
+    
+    /* Make the Get Started button even smaller on very small screens */
+    .btn-purchase {
+        padding: 0.45rem 0.9rem;
+        font-size: 0.8rem;
+    }
+    
+    /* Ensure the logo isn't too crowded at the top */
+    .logo img {
+        height: 28px;
+    }
+    
+    /* Fix black square issue under bottom icon */
+    footer i {
+        background-color: transparent !important;
     }
 }
 

@@ -36,8 +36,18 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
+                let offset = 80; // Default offset for header
+                
+                // Special offset for Team and Products sections
+                if(targetId === '#team') {
+                    offset = 120; // Increased offset for Team section
+                }
+                if(targetId === '#products') {
+                    offset = 120; // Increased offset for Products section
+                }
+                
                 window.scrollTo({
-                    top: targetElement.offsetTop - 80, // Offset for header
+                    top: targetElement.offsetTop - offset,
                     behavior: 'smooth'
                 });
             }

@@ -782,7 +782,7 @@ a.service-card:hover {
 
 .product-card {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 0.8fr 2.2fr;
     gap: 3rem;
     align-items: center;
     padding: 3rem;
@@ -793,11 +793,13 @@ a.service-card:hover {
 }
 
 .product-card.reversed {
-    grid-template-columns: 0.8fr 2.2fr;
+    grid-template-columns: 2fr 1fr;
 }
 
 .product-card .product-image {
     order: 1;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .product-card .product-details {
@@ -809,6 +811,8 @@ a.service-card:hover {
 
 .product-card.reversed .product-image {
     order: 2;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 .product-card.reversed .product-details {
@@ -823,6 +827,7 @@ a.service-card:hover {
     align-items: center;
     justify-content: center;
     position: relative;
+    max-width: 300px;
 }
 
 .product-image img {
@@ -923,8 +928,8 @@ a.service-card:hover {
 /* Specific zoom for Harry and Tom images */
 .team-members .team-member:nth-child(2) .member-image img,
 .team-members .team-member:nth-child(3) .member-image img {
-    width: 140%;
-    height: 140%;
+    width: 160%;
+    height: 160%;
     object-position: center 20%;
 }
 
@@ -1237,6 +1242,12 @@ footer {
 
     .product-card.reversed .product-actions {
         justify-content: flex-start;
+    }
+
+    .product-image {
+        max-width: 250px;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 }
 

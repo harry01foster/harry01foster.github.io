@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Add hover effects to cards
-    const cards = document.querySelectorAll('.service-card, .team-member, .product-card, .platform-logo');
+    const cards = document.querySelectorAll('.team-member, .product-card, .platform-logo');
     
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {

@@ -241,7 +241,11 @@ nav {
 }
 
 header.scrolled nav {
-    max-width: 950px;
+    max-width: 750px;
+}
+
+header.scrolled .logo img {
+    height: 28px;
 }
 
 .navbar {
@@ -262,10 +266,6 @@ header.scrolled nav {
     backface-visibility: hidden;
     transform: translateZ(0);
     -webkit-font-smoothing: subpixel-antialiased;
-}
-
-header.scrolled .logo img {
-    height: 32px;
 }
 
 .nav-links {
@@ -632,6 +632,15 @@ header.scrolled .logo img {
     .footer-logo img {
         height: 70px;
         margin: 0 auto 1.5rem;
+    }
+
+    /* Fix for header on mobile - consistent size when scrolling */
+    header.scrolled nav {
+        max-width: 95%;
+    }
+    
+    header.scrolled .logo img {
+        height: 32px;
     }
 }
 

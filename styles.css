@@ -658,6 +658,20 @@ header.scrolled .logo img {
     justify-content: space-between;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     border: none;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+.service-card:hover p {
+    background-color: #f9f9f9;
 }
 
 .service-card > div {
@@ -665,11 +679,6 @@ header.scrolled .logo img {
     flex-direction: column;
     gap: 0.75rem;
     padding: 2.5rem 2.5rem 1.5rem;
-}
-
-.service-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .service-title {
@@ -685,6 +694,7 @@ header.scrolled .logo img {
     font-size: 1.5rem;
     color: #ff5733;
     display: inline-block;
+    transition: var(--transition);
 }
 
 .service-card h3 {
@@ -702,6 +712,16 @@ header.scrolled .logo img {
     line-height: 1.6;
     margin: 0;
     padding: 2rem 2.5rem;
+    transition: var(--transition);
+}
+
+a.service-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.service-card:hover {
+    color: inherit;
 }
 
 /* Platforms Section */
@@ -762,7 +782,7 @@ header.scrolled .logo img {
 
 .product-card {
     display: grid;
-    grid-template-columns: 0.8fr 2.2fr;
+    grid-template-columns: 2fr 1fr;
     gap: 3rem;
     align-items: center;
     padding: 3rem;
@@ -773,7 +793,18 @@ header.scrolled .logo img {
 }
 
 .product-card.reversed {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 0.8fr 2.2fr;
+}
+
+.product-card .product-image {
+    order: 1;
+}
+
+.product-card .product-details {
+    order: 2;
+    text-align: left;
+    padding-left: 1.5rem;
+    padding-right: 0;
 }
 
 .product-card.reversed .product-image {
@@ -787,14 +818,6 @@ header.scrolled .logo img {
     padding-right: 1.5rem;
 }
 
-.product-card.reversed .product-actions {
-    justify-content: flex-start;
-}
-
-.product-card.reversed .feature {
-    justify-content: flex-start;
-}
-
 .product-image {
     display: flex;
     align-items: center;
@@ -805,6 +828,11 @@ header.scrolled .logo img {
 .product-image img {
     width: 100%;
     border-radius: var(--border-radius-sm);
+    transition: var(--transition);
+}
+
+.product-image a:hover img {
+    transform: scale(1.03);
 }
 
 .product-tagline {
@@ -823,6 +851,7 @@ header.scrolled .logo img {
     display: flex;
     gap: 1rem;
     align-items: center;
+    justify-content: flex-start;
 }
 
 .feature {
@@ -830,6 +859,7 @@ header.scrolled .logo img {
     align-items: center;
     gap: 0.75rem;
     margin-bottom: 0.9rem;
+    justify-content: flex-start;
 }
 
 .feature i {
@@ -840,10 +870,6 @@ header.scrolled .logo img {
 .feature span {
     color: var(--text-dark);
     font-weight: 500;
-}
-
-.product-details {
-    padding-left: 1.5rem;
 }
 
 /* Team Section */
@@ -892,6 +918,14 @@ header.scrolled .logo img {
     height: 110%;
     object-fit: cover;
     object-position: center 35%;
+}
+
+/* Specific zoom for Harry and Tom images */
+.team-members .team-member:nth-child(2) .member-image img,
+.team-members .team-member:nth-child(3) .member-image img {
+    width: 140%;
+    height: 140%;
+    object-position: center 20%;
 }
 
 .member-role {

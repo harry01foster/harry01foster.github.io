@@ -1489,6 +1489,12 @@ footer {
     cursor: pointer;
     justify-self: center;
     width: 100%;
+    background: #ff5733;
+    border: none;
+}
+
+.contact-form .submit-btn:hover {
+    background: #ff8566;
 }
 
 .form-status {

@@ -36,14 +36,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
-                let offset = 80; // Default offset for header
+                let offset = 0; // Added 50px to previous -50px value
                 
                 // Special offset for Team and Products sections
                 if(targetId === '#team') {
-                    offset = 120; // Increased offset for Team section
+                    offset = -30; // Keeping Team section offset unchanged
                 }
                 if(targetId === '#products') {
-                    offset = 120; // Increased offset for Products section
+                    offset = -30; // Keeping Products section offset unchanged
                 }
                 
                 window.scrollTo({
